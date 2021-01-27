@@ -1,12 +1,10 @@
-﻿var submit = document.getElementById("submitbutton")
-
-submit.addEventListener("click", function () {
+﻿$("#submitbutton").click( function () {
     //bring in all of the values from the input boxes
-    var assignments = document.getElementById("assignments").value;
-    var projects = document.getElementById("projects").value;
-    var quizzes = document.getElementById("quizzes").value;
-    var exams = document.getElementById("exams").value;
-    var intex = document.getElementById("intex").value;
+    var assignments = $("#assignments").val();
+    var projects = $("#projects").val();
+    var quizzes = $("#quizzes").val();
+    var exams = $("#exams").val();
+    var intex = $("#intex").val();
 
     //calculate grade for each category and weight
     var pct = (assignments * .01 * 50) + (projects * .01 * 10) + (quizzes * .01 * 10) + (exams * .01 * 20) + (intex * .01 * 10);

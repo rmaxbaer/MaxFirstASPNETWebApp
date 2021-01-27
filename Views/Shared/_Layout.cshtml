@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Name's ASP.NET Site</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+
+    <!--These lines bring in my icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <h1>My name is @ViewBag.Name</h1>
+        <br />
+        <i class="fa fa-car"></i>
+        <i class="fa fa-car" style="font-size:48px;"></i>
+        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="FanMail">Grades</a></li>
+            </ul>
+        </menu>
+        <br />
+    </header>
+
+    @RenderBody()
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/js/grade.js"></script>
+</body>
+</html>
